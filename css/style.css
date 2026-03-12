@@ -61,6 +61,7 @@ body {
   background-color: var(--bg-light);
   line-height: 1.6;
   overflow-x: hidden;
+  text-align: center;
 }
 
 a {
@@ -109,6 +110,8 @@ p {
   font-weight: 400;
   margin-bottom: var(--space-16);
   max-width: 65ch; /* Readable paragraph width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Layout Utilities */

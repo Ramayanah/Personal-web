@@ -25,16 +25,19 @@
 }
 
 .hero-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: var(--space-64);
   align-items: center;
+  justify-content: center;
+  text-align: center;
   position: relative;
   z-index: 1;
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .trust-badge {
@@ -58,6 +61,7 @@
 
 .hero-cta-group {
   display: flex;
+  justify-content: center;
   gap: var(--space-16);
   flex-wrap: wrap;
 }
@@ -72,11 +76,11 @@
 
 .hero-bg-shape {
   position: absolute;
-  width: 80%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   background-color: var(--primary);
-  border-radius: var(--radius-lg);
-  transform: rotate(5deg);
+  border-radius: 500px; /* Capsule visual rhyming */
+  transform: rotate(5deg) translateY(-10px);
   z-index: 1;
   opacity: var(--op-90);
 }
@@ -84,12 +88,13 @@
 .hero-portrait {
   position: relative;
   z-index: 2;
-  border-radius: var(--radius-md);
+  border-radius: 500px; /* Capsule pill shape */
   box-shadow: var(--shadow-float);
-  width: 85%;
+  width: 100%;
+  max-width: 350px;
   height: auto;
   object-fit: cover;
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/4;
   border: 4px solid var(--bg-white);
   transition: transform var(--transition-normal);
 }
@@ -114,8 +119,8 @@
 }
 
 .expert-card {
-  bottom: 10%;
-  left: -5%;
+  bottom: 0%;
+  left: -20%;
 }
 
 .icon-circle {
@@ -175,21 +180,12 @@
 
 @media (max-width: 992px) {
   .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
     padding-top: var(--space-48);
   }
   
-  .hero-content {
-    margin: 0 auto;
-  }
-  
-  .hero-cta-group {
-    justify-content: center;
-  }
-  
   .expert-card {
-    left: 5%;
+    left: 0%;
+    bottom: -5%;
   }
 }
 
