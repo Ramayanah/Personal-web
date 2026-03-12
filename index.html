@@ -174,6 +174,13 @@
                     <p style="margin: 0 auto;">Choose a starting aesthetic that matches your firm's brand identity.</p>
                 </div>
                 <div class="template-grid">
+                    <!-- 
+                      HOW TO ADD MORE TEMPLATES:
+                      1. Copy the entire <div class="template-card">...</div> block below.
+                      2. Paste it inside the .template-grid container.
+                      3. Change the text, icons (`fa-landmark`, `fa-laptop-code`), and overlay classes (`overlay-1`, `overlay-2`, `overlay-3`).
+                      4. The grid will automatically scale and align the new cards!
+                    -->
                     <!-- Template 1 -->
                     <div class="template-card">
                         <div class="template-image overlay-1"><i class="fa-solid fa-landmark"></i></div>
@@ -217,7 +224,7 @@
                     <div class="process-step">
                         <div class="process-content">
                             <div class="process-number">1</div>
-                            <h3>Discovery & Strategy</h3>
+                            <h3 class="process-title">Discovery & Strategy</h3>
                             <p style="color: rgba(255,255,255,0.8);">We define your firm's unique value, target clients,
                                 and structural requirements for the website.</p>
                         </div>
@@ -225,7 +232,7 @@
                     <div class="process-step">
                         <div class="process-content">
                             <div class="process-number">2</div>
-                            <h3>UX/UI Design</h3>
+                            <h3 class="process-title">UX/UI Design</h3>
                             <p style="color: rgba(255,255,255,0.8);">I craft a premium design matching the "Trust
                                 System", carefully selecting typography and color hierarchies.</p>
                         </div>
@@ -233,7 +240,7 @@
                     <div class="process-step">
                         <div class="process-content">
                             <div class="process-number">3</div>
-                            <h3>Development</h3>
+                            <h3 class="process-title">Development</h3>
                             <p style="color: rgba(255,255,255,0.8);">The design is coded into a lightning-fast, fully
                                 responsive, SEO-ready static website.</p>
                         </div>
@@ -241,7 +248,7 @@
                     <div class="process-step">
                         <div class="process-content">
                             <div class="process-number">4</div>
-                            <h3>Launch & Handover</h3>
+                            <h3 class="process-title">Launch & Handover</h3>
                             <p style="color: rgba(255,255,255,0.8);">Final testing, deployment, and providing you with
                                 the tools to manage your digital presence effectively.</p>
                         </div>
@@ -293,34 +300,30 @@
                     <h2>Transparent Pricing</h2>
                     <p style="margin: 0 auto;">Clear packages designed specifically for CA firms.</p>
                 </div>
-                <div class="pricing-grid">
-                    <!-- Basic -->
-                    <div class="pricing-card">
-                        <h3>Starter Presence</h3>
-                        <div class="price">₹15,000<span>/one-time</span></div>
-                        <p>Perfect for independent consultants.</p>
+                <div class="pricing-grid" style="display: flex; justify-content: center;">
+                    <!-- Premium Package -->
+                    <div class="pricing-card popular" style="max-width: 500px; width: 100%;">
+                        <div class="popular-badge">PREMIUM PACKAGE</div>
+                        <h3>Professional CA Website</h3>
+                        <div class="price">₹20,000<span>/one-time</span></div>
+                        <p>A complete, professional presence to attract high-tier clients.</p>
                         <ul class="pricing-features">
-                            <li><i class="fa-solid fa-check"></i> Single Page Premium Website</li>
-                            <li><i class="fa-solid fa-check"></i> Basic SEO Optimization</li>
-                            <li><i class="fa-solid fa-check"></i> Mobile Responsive Design</li>
+                            <li><i class="fa-solid fa-check"></i> Custom Premium Design</li>
+                            <li><i class="fa-solid fa-check"></i> Advanced SEO Optimization</li>
+                            <li><i class="fa-solid fa-check"></i> Mobile Responsive Structure</li>
                             <li><i class="fa-solid fa-check"></i> Contact Form Integration</li>
+                            <li
+                                style="margin-top: 24px; color: var(--text-muted); font-size: 0.9em; justify-content: center;">
+                                <i class="fa-solid fa-plus" style="color: var(--secondary);"></i> * Domain charge is
+                                separate
+                            </li>
+                            <li style="color: var(--text-muted); font-size: 0.9em; justify-content: center;">
+                                <i class="fa-solid fa-plus" style="color: var(--secondary);"></i> ₹1,000 per month
+                                maintenance
+                            </li>
                         </ul>
-                        <a href="#contact" class="btn btn-secondary" style="width: 100%;">Select Package</a>
-                    </div>
-                    <!-- Pro -->
-                    <div class="pricing-card popular">
-                        <div class="popular-badge">MOST POPULAR</div>
-                        <h3>Professional Firm</h3>
-                        <div class="price">₹35,000<span>/one-time</span></div>
-                        <p>Comprehensive 5-7 page setup for firms.</p>
-                        <ul class="pricing-features">
-                            <li><i class="fa-solid fa-check"></i> Custom 5-7 Page Structure</li>
-                            <li><i class="fa-solid fa-check"></i> Advanced SEO Setup</li>
-                            <li><i class="fa-solid fa-check"></i> Services & Team Pages</li>
-                            <li><i class="fa-solid fa-check"></i> WhatsApp & CTA Integration</li>
-                            <li><i class="fa-solid fa-check"></i> Fast Static Hosting Setup</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-primary" style="width: 100%;">Select Package</a>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%; margin-top: 16px;">Get Started
+                            Now</a>
                     </div>
                 </div>
             </div>
@@ -334,8 +337,8 @@
                     <p style="color: rgba(255,255,255,0.8); margin: 24px auto; max-width: 600px;">Let's build a digital
                         presence that perfectly reflects your expertise and attracts top-tier clients.</p>
                     <div class="hero-cta-group" style="justify-content: center; margin-top: 32px;">
-                        <a href="mailto:[EMAIL_ADDRESS]" class="btn btn-accent">Get My Website</a>
-                        <a href="https://wa.me/917739036042" class="btn btn-secondary"
+                        <a href="mailto:Ramayanah1@outlook.com" class="btn btn-accent">Get My Website</a>
+                        <a href="https://wa.me/916204081864" class="btn btn-secondary"
                             style="color: white; border-color: white;">WhatsApp Consultation</a>
                     </div>
                 </div>
@@ -371,9 +374,10 @@
                 <div class="footer-links">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="mailto:hello@ramah.com"><i class="fa-solid fa-envelope"></i> hello@ramah.com</a>
+                        <li><a href="mailto:Ramayanah1@outlook.com"><i class="fa-solid fa-envelope"></i>
+                                Ramayanah1@outlook.com</a>
                         </li>
-                        <li><a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a></li>
+                        <li><a href="tel:+916204081864"><i class="fa-solid fa-phone"></i> +91 62040 81864</a></li>
                         <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
                     </ul>
                 </div>
@@ -385,7 +389,7 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/917739036042" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    <a href="https://wa.me/916204081864" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
         aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>

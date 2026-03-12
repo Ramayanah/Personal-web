@@ -226,6 +226,11 @@
   margin: 0 auto;
 }
 
+.process-title {
+  color: var(--accent); /* Using Gold to contrast heavily against deep navy */
+  font-size: 1.5rem;
+}
+
 .process-number {
   position: absolute;
   width: 40px;
