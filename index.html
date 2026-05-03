@@ -15,16 +15,16 @@
     <meta property="og:description" content="Custom websites for Chartered Accountants in Patna.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ramah.in/">
-    <meta property="og:image" content="https://ramah.in/assets/preview.jpg">
+    <meta property="og:image" content="https://ramah.in/assets/preview.png">
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": "LocalBusiness",
       "name": "Rama H.",
       "url": "https://ramah.in/",
-      "image": "https://ramah.in/assets/preview.jpg",
+      "image": "https://ramah.in/assets/preview.png",
       "description": "Custom website development services for Chartered Accountants in Patna. Fast, modern and SEO-friendly websites.",
       "areaServed": {
         "@type": "City",
@@ -64,6 +64,11 @@
 </head>
 
 <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Loading...</p>
+    </div>
 
     <!-- Floating Navbar -->
     <nav class="navbar">
@@ -75,12 +80,11 @@
             <a href="#services">Services</a>
             <a href="#process">Process</a>
             <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
+            <!-- <a href="#contact">Contact</a> -->
+            <a href="#contact" class="btn btn-primary nav-cta">Get My Website</a>
         </div>
 
-        <a href="#contact" class="btn btn-primary nav-cta">Get My Website</a>
-
-        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+        <button class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -110,7 +114,7 @@
                 <div class="hero-image-wrapper">
                     <!-- Layered Depth Effect for Portrait -->
                     <div class="hero-bg-shape"></div>
-                    <img src="assets/images/rama-portrait.webp" alt="Rama H - CA Website Developer in Patna"
+                    <img src="assets/images/rama-portrait.png" alt="Rama H - CA Website Developer in Patna"
                         class="hero-portrait">
 
                     <!-- Floating Experience Card -->
@@ -196,12 +200,6 @@
                         <h3>Tax Consultant Website</h3>
                         <p>Professional profiles for independent tax consultants looking to scale their client base.</p>
                     </div>
-                    <!-- <div class="service-card">
-                        <i class="fa-solid fa-chart-pie"></i>
-                        <h3>Accounting Firm Website</h3>
-                        <p>Corporate bookkeeping and accounting firm websites displaying services clearly and cleanly.
-                        </p>
-                    </div> -->
                 </div>
             </div>
         </section>
@@ -214,13 +212,6 @@
                     <p style="margin: 0 auto;">Choose a starting aesthetic that matches your firm's brand identity.</p>
                 </div>
                 <div class="template-grid">
-                    <!-- 
-                      HOW TO ADD MORE TEMPLATES:
-                      1. Copy the entire <div class="template-card">...</div> block below.
-                      2. Paste it inside the .template-grid container.
-                      3. Change the text, icons (`fa-landmark`, `fa-laptop-code`), and overlay classes (`overlay-1`, `overlay-2`, `overlay-3`).
-                      4. The grid will automatically scale and align the new cards!
-                    -->
                     <!-- Template 1 -->
                     <div class="template-card">
                         <div class="template-image overlay-1"><i class="fa-solid fa-landmark"></i></div>
@@ -243,16 +234,6 @@
                                 style="margin-top: 16px;">Preview Theme</a>
                         </div>
                     </div>
-                    <!-- Template 3 -->
-                    <!-- <div class="template-card">
-                        <div class="template-image overlay-3"><i class="fa-solid fa-user-tie"></i></div>
-                        <div class="template-content">
-                            <h3>Cloudy CA Website</h3>
-                            <p>Focused on the individual consultant. Builds deep personal brand trust.</p>
-                            <a href="https://ramayanah.github.io/CloudyWeb/" class="btn btn-secondary"
-                                style="margin-top: 16px;">Preview Theme</a>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </section>
@@ -315,7 +296,7 @@
                             incredibly premium, and it has directly resulted in three major corporate client
                             acquisitions this quarter."</p>
                         <div class="client-info">
-                            <div class="client-avatar">RK</div>
+                            <div class="client-avatar" aria-label="Rahul K. Avatar">RK</div>
                             <div>
                                 <h4>Rahul K.</h4>
                                 <p style="font-size: 0.85rem; margin-bottom: 0;">Managing Partner, RK Associates</p>
@@ -327,7 +308,7 @@
                         <p class="quote">"The process was seamless. Rama understands exactly what a Chartered Accountant
                             needs to communicate trust online. Highly recommended."</p>
                         <div class="client-info">
-                            <div class="client-avatar">SM</div>
+                            <div class="client-avatar" aria-label="Sarah M. Avatar">SM</div>
                             <div>
                                 <h4>Sarah M.</h4>
                                 <p style="font-size: 0.85rem; margin-bottom: 0;">Independent Tax Consultant</p>
@@ -383,7 +364,7 @@
                     <p style="color: rgba(255,255,255,0.8); margin: 24px auto; max-width: 600px;">Ready to Launch Your
                         CA Firm Website? Let's build a digital presence that perfectly reflects your expertise and
                         attracts top-tier clients in Patna and beyond.</p>
-                    <div class="hero-cta-group" style="justify-content: center; margin-top: 32px;">
+                    <div class="hero-cta-group" style="justify-content: center; margin-top: 32px; margin-bottom: 48px;">
                         <a href="mailto:Ramayanah1@outlook.com" class="btn btn-accent">Email Me Now</a>
                         <a href="https://wa.me/916204081864" class="btn btn-whatsapp">WhatsApp Consultation</a>
                     </div>
@@ -406,7 +387,7 @@
                     <ul>
                         <li><a href="#templates">Classic CA Theme</a></li>
                         <li><a href="#templates">Modern Tech Theme</a></li>
-                        <li><a href="#templates">Personal Consultant</a></li>
+                        <!-- <li><a href="#templates">Personal Consultant</a></li> -->
                     </ul>
                 </div>
                 <div class="footer-links">

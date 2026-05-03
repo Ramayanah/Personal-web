@@ -190,6 +190,12 @@
 }
 
 @media (max-width: 768px) {
+  .hero-container {
+    gap: var(--space-32);
+  }
+  .hero-portrait {
+    max-width: 280px;
+  }
   .whatsapp-float {
     bottom: var(--space-24);
     right: var(--space-24);

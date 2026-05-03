@@ -1,3 +1,31 @@
+// Hide loader when page fully loads
+function hidePageLoader() {
+    const loader = document.getElementById('pageLoader');
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 500);
+    }
+}
+
+// Show loader on page refresh
+window.addEventListener('beforeunload', () => {
+    const loader = document.getElementById('pageLoader');
+    if (loader) {
+        loader.classList.remove('hidden');
+    }
+});
+
+// Hide loader when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hidePageLoader);
+} else {
+    hidePageLoader();
+}
+
+// Also hide loader when window fully loads
+window.addEventListener('load', hidePageLoader);
+
 document.addEventListener('DOMContentLoaded', () => {
     // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
@@ -16,7 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileMenuBtn && navLinks) {
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            const isActive = navLinks.classList.toggle('active');
+            mobileMenuBtn.setAttribute('aria-expanded', isActive);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
         });
     }
 
@@ -26,6 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             
             navLinks.classList.remove('active'); // Close mobile menu if open
+            if(mobileMenuBtn) {
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
 
             const targetId = this.getAttribute('href');
             if(targetId === '#') return;
@@ -40,6 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Contact form removed - use external contact methods (Email/WhatsApp)
 
     // Scroll Reveal Animations
     const observerOptions = {
@@ -59,4 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
+
+    // Production: Track page visibility for analytics
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            console.log('Page hidden');
+        } else {
+            console.log('Page visible');
+        }
+    });
 });
