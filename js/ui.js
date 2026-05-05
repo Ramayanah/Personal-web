@@ -25,6 +25,39 @@ const UIController = (function () {
     let currentStep = 0;
     const totalSteps = DOM.steps.length;
 
+    function getNavbarOffset() {
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            const styles = getComputedStyle(navbar);
+            const top = parseFloat(styles.top) || 0;
+            return Math.ceil(navbar.getBoundingClientRect().height + top + 24);
+        }
+
+        const bodyStyles = getComputedStyle(document.body);
+        const bodyOffset = parseFloat(bodyStyles.getPropertyValue('--navbar-clearance'));
+        if (Number.isFinite(bodyOffset)) return bodyOffset;
+
+        const styles = getComputedStyle(document.documentElement);
+        const cssOffset = parseFloat(styles.getPropertyValue('--navbar-clearance'));
+        return Number.isFinite(cssOffset) ? cssOffset : 128;
+    }
+
+    function scrollToFormTop() {
+        const target = document.querySelector('.form-container');
+        if (!target) return;
+
+        const top = target.getBoundingClientRect().top + window.pageYOffset - getNavbarOffset();
+        window.scrollTo({
+            top: Math.max(0, top),
+            behavior: 'smooth'
+        });
+    }
+
+    function scrollToError(element) {
+        if (!element) return;
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
     /**
      * Initialize UI Listeners
      */
@@ -84,7 +117,7 @@ const UIController = (function () {
             // Scroll to first error
             const firstError = currentStepEl.querySelector('.error');
             if (firstError) {
-                firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                scrollToError(firstError);
             }
         }
     }
@@ -127,8 +160,8 @@ const UIController = (function () {
             DOM.submitBtn.style.display = 'none';
         }
 
-        // Scroll to top of form container smoothly
-        document.querySelector('.form-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Scroll to the form top without hiding the heading behind the fixed navbar.
+        scrollToFormTop();
     }
 
     /**

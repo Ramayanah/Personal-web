@@ -29,6 +29,30 @@ window.addEventListener('load', hidePageLoader);
 document.addEventListener('DOMContentLoaded', () => {
     // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
+
+    function getNavbarOffset() {
+        if (navbar) {
+            const styles = getComputedStyle(navbar);
+            const top = parseFloat(styles.top) || 0;
+            return Math.ceil(navbar.getBoundingClientRect().height + top + 24);
+        }
+
+        const bodyStyles = getComputedStyle(document.body);
+        const bodyOffset = parseFloat(bodyStyles.getPropertyValue('--navbar-clearance'));
+        if (Number.isFinite(bodyOffset)) return bodyOffset;
+
+        const styles = getComputedStyle(document.documentElement);
+        const cssOffset = parseFloat(styles.getPropertyValue('--navbar-clearance'));
+        return Number.isFinite(cssOffset) ? cssOffset : 120;
+    }
+
+    function scrollWithNavbarOffset(targetElement) {
+        const top = targetElement.getBoundingClientRect().top + window.pageYOffset - getNavbarOffset();
+        window.scrollTo({
+            top: Math.max(0, top),
+            behavior: 'smooth'
+        });
+    }
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -74,10 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                scrollWithNavbarOffset(targetElement);
             }
         });
     });

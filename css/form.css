@@ -8,7 +8,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 130px; /* Space for the fixed floating navbar */
+  --navbar-clearance: 128px;
+  padding-top: var(--navbar-clearance);
 }
 
 /* Form Navbar — floating pill style matching main site */
@@ -75,18 +76,21 @@
   padding: var(--space-48);
   border: 1px solid rgba(10,25,47,0.08);
   text-align: center; /* Keep text centered like the website */
+  scroll-margin-top: var(--navbar-clearance);
 }
 
 .form-header {
   margin-bottom: var(--space-48);
+  scroll-margin-top: var(--navbar-clearance);
 }
 
 .form-header h2 {
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
   margin-bottom: var(--space-8);
 }
 
 .form-header p {
+  font-size: 1.05rem;
   margin-bottom: var(--space-24);
 }
 
@@ -118,6 +122,7 @@
   display: none;
   animation: slideFadeIn 0.4s ease forwards;
   text-align: left; /* Keep form fields aligned nicely, but container centered */
+  scroll-margin-top: var(--navbar-clearance);
 }
 
 .form-step.active {
@@ -312,6 +317,25 @@
   margin-bottom: var(--space-24);
 }
 
+.success-screen .hero-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+}
+
+.success-screen .btn-whatsapp {
+  background-color: #25d366;
+  border-color: #25d366;
+  color: #ffffff;
+}
+
+.success-screen .btn-whatsapp:hover {
+  background-color: #1da851;
+  border-color: #1da851;
+  color: #ffffff;
+}
+
 /* Animations */
 @keyframes slideFadeIn {
   from {
@@ -327,7 +351,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .form-page {
-    padding-top: 108px;
+    --navbar-clearance: 112px;
   }
 
   .form-navbar {
@@ -379,6 +403,10 @@
 }
 
 @media (max-width: 420px) {
+  .form-page {
+    --navbar-clearance: 104px;
+  }
+
   .form-main {
     padding-left: var(--space-16);
     padding-right: var(--space-16);
