@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/images/LogoWeb.png">
+    <link rel="apple-touch-icon" href="assets/images/LogoWeb.png">
     <title>Website Developer for CA in Patna | Rama H.</title>
     <meta name="description"
         content="Professional website development for Chartered Accountants in Patna. Fast, modern and SEO-friendly CA websites by Rama H.">
@@ -72,7 +74,9 @@
 
     <!-- Floating Navbar -->
     <nav class="navbar">
-        <div class="nav-brand">Rama H.</div>
+        <a href="#home" class="nav-brand-link">
+            <img src="assets/images/LogoWeb.png" alt="Rama H. Logo" class="nav-logo">
+        </a>
 
         <div class="nav-links">
             <a href="#home">Home</a>
@@ -80,8 +84,8 @@
             <a href="#services">Services</a>
             <a href="#process">Process</a>
             <a href="#pricing">Pricing</a>
-            <!-- <a href="#contact">Contact</a> -->
-            <a href="#contact" class="btn btn-primary nav-cta">Get My Website</a>
+            <a href="#contact">Contact</a>
+            <a href="form.html" class="btn btn-primary nav-cta">Get My Website</a>
         </div>
 
         <button class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
@@ -105,7 +109,7 @@
                         attract clients, build trust, and showcase authority in the financial sector.</p>
 
                     <div class="hero-cta-group">
-                        <a href="#contact" class="btn btn-primary">Get My Website <i class="fa-solid fa-arrow-right"
+                        <a href="form.html" class="btn btn-primary">Get My Website <i class="fa-solid fa-arrow-right"
                                 style="margin-left: 8px;"></i></a>
                         <a href="#templates" class="btn btn-secondary">View Templates</a>
                     </div>
@@ -219,7 +223,7 @@
                             <h3>CA Modern Website</h3>
                             <p>A clean and modern website template crafted for Chartered Accountants to showcase
                                 expertise and build strong client trust.</p>
-                            <a href="https://ramayanah.github.io/CA-web-2/" class="btn btn-secondary"
+                            <a href="https://ramayanah.github.io/CA-web-2/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"
                                 style="margin-top: 16px;">Preview Theme</a>
                         </div>
                     </div>
@@ -230,7 +234,7 @@
                             <h3>classic CA Website</h3>
                             <p>A timeless and professional website template designed for Chartered Accountants who want
                                 to showcase trust, experience, and strong credibility.</p>
-                            <a href="https://ramayanah.github.io/CA-web-Temp-1/" class="btn btn-secondary"
+                            <a href="https://ramayanah.github.io/CA-web-Temp-1/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"
                                 style="margin-top: 16px;">Preview Theme</a>
                         </div>
                     </div>
@@ -327,13 +331,12 @@
                     <p style="margin: 0 auto;">Clear, one-time investment packages designed for CA firms in Patna
                         seeking professional website presence.</p>
                 </div>
-                <div class="pricing-grid" style="display: flex; justify-content: center;">
-                    <!-- Premium Package -->
-                    <div class="pricing-card popular" style="max-width: 500px; width: 100%;">
-                        <div class="popular-badge">PREMIUM PACKAGE</div>
-                        <h3>Professional CA Website</h3>
+                <div class="pricing-grid">
+                    <!-- Single Page Package -->
+                    <div class="pricing-card">
+                        <h3>Professional Landing Page</h3>
                         <div class="price">₹20,000<span>/one-time</span></div>
-                        <p>A complete, professional presence to attract high-tier clients.</p>
+                        <p>A complete, professional single-page presence to attract high-tier clients.</p>
                         <ul class="pricing-features">
                             <li><i class="fa-solid fa-check"></i> Custom Premium Design</li>
                             <li><i class="fa-solid fa-check"></i> Advanced SEO Optimization</li>
@@ -349,7 +352,32 @@
                                 maintenance
                             </li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary" style="width: 100%; margin-top: 16px;">Get Started
+                        <a href="form.html" class="btn btn-secondary" style="width: 100%; margin-top: 16px;">Get Started
+                            Now</a>
+                    </div>
+
+                    <!-- Multi-page Package -->
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">PREMIUM PACKAGE</div>
+                        <h3>Multi-page Static Website</h3>
+                        <div class="price">₹25,000<span>/one-time</span></div>
+                        <p>Comprehensive online office with dedicated pages for your services.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> Everything in Landing Page</li>
+                            <li><i class="fa-solid fa-check"></i> Multiple Dedicated Pages</li>
+                            <li><i class="fa-solid fa-check"></i> Detailed Service Breakdowns</li>
+                            <li><i class="fa-solid fa-check"></i> Enhanced Navigation</li>
+                            <li
+                                style="margin-top: 24px; color: var(--text-muted); font-size: 0.9em; justify-content: center;">
+                                <i class="fa-solid fa-plus" style="color: var(--secondary);"></i> * Domain charge is
+                                separate
+                            </li>
+                            <li style="color: var(--text-muted); font-size: 0.9em; justify-content: center;">
+                                <i class="fa-solid fa-plus" style="color: var(--secondary);"></i> ₹2,000 per month
+                                maintenance
+                            </li>
+                        </ul>
+                        <a href="form.html" class="btn btn-primary" style="width: 100%; margin-top: 16px;">Get Started
                             Now</a>
                     </div>
                 </div>
@@ -366,7 +394,7 @@
                         attracts top-tier clients in Patna and beyond.</p>
                     <div class="hero-cta-group" style="justify-content: center; margin-top: 32px; margin-bottom: 48px;">
                         <a href="mailto:Ramayanah1@outlook.com" class="btn btn-accent">Email Me Now</a>
-                        <a href="https://wa.me/916204081864" class="btn btn-whatsapp">WhatsApp Consultation</a>
+                        <a href="https://wa.me/916204081864" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Consultation</a>
                     </div>
                 </div>
             </div>
@@ -405,7 +433,7 @@
                                 Ramayanah1@outlook.com</a>
                         </li>
                         <li><a href="tel:+916204081864"><i class="fa-solid fa-phone"></i> +91 62040 81864</a></li>
-                        <li><a href="https://www.linkedin.com/in/ramayanah"><i class="fa-brands fa-linkedin"></i>
+                        <li><a href="https://www.linkedin.com/in/ramayanah" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i>
                                 LinkedIn</a></li>
                     </ul>
                 </div>

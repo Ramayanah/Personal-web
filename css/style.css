@@ -247,11 +247,17 @@ p {
   box-shadow: var(--shadow-float);
 }
 
-.nav-brand {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary);
+.nav-brand-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-links {
@@ -355,6 +361,10 @@ p {
     gap: var(--space-16);
     text-align: center;
     z-index: 1001; /* Ensure overriding z-index */
+  }
+
+  .nav-links.active .nav-cta {
+    display: inline-flex;
   }
 }
 

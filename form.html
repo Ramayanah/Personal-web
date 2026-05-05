@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/images/LogoWeb.png">
+    <link rel="apple-touch-icon" href="assets/images/LogoWeb.png">
+    <title>Client Onboarding | Rama H. CA Website Developer</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body class="form-page">
+    <!-- Form Navbar - matching main site floating pill style -->
+    <nav class="navbar form-navbar">
+        <a href="index.html" class="nav-brand-link">
+            <img src="assets/images/LogoWeb.png" alt="Rama H. Logo" class="nav-logo">
+        </a>
+        <a href="index.html" class="btn btn-secondary back-btn"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back to Home</a>
+    </nav>
+
+    <main class="form-main">
+        <div class="form-container fade-in visible">
+            <div class="form-header">
+                <h2>Client Requirements Form</h2>
+                <p>Let's build a website that perfectly matches your CA firm's vision.</p>
+                
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar" style="width: 14%;"></div>
+                </div>
+                <div class="progress-text">Step <span id="currentStepNum">1</span> of 7</div>
+            </div>
+
+            <form id="onboardingForm" novalidate>
+                <!-- Step 1: Basic Information -->
+                <div class="form-step active" data-step="1">
+                    <h3>1. Basic Information</h3>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="firmName">Firm Name *</label>
+                            <input type="text" id="firmName" name="firmName" required placeholder="e.g. RK Associates & Co.">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="ownerName">Owner/Partner Name *</label>
+                            <input type="text" id="ownerName" name="ownerName" required placeholder="e.g. CA Rahul Kumar">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="yearEstablished">Year Established *</label>
+                            <input type="number" id="yearEstablished" name="yearEstablished" required placeholder="YYYY" min="1900" max="2030">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="cityState">City & State *</label>
+                            <input type="text" id="cityState" name="cityState" required placeholder="e.g. Patna, Bihar">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="address">Full Office Address *</label>
+                            <textarea id="address" name="address" required placeholder="Enter full postal address..." rows="2"></textarea>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="10-digit mobile number">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="whatsapp">WhatsApp Number (Optional)</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="Leave empty if same as above">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Official Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="contact@firm.com">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="googleMap">Google Maps Link (Optional)</label>
+                            <input type="url" id="googleMap" name="googleMap" placeholder="https://maps.app.goo.gl/...">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="officeTimings">Office Timings *</label>
+                            <input type="text" id="officeTimings" name="officeTimings" required placeholder="e.g. Mon-Sat: 10:00 AM - 7:00 PM">
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Services -->
+                <div class="form-step" data-step="2">
+                    <h3>2. Services & Expertise</h3>
+                    <div class="form-group full-width">
+                        <label>Core Services (Select all that apply) *</label>
+                        <div class="checkbox-grid">
+                            <label class="custom-checkbox"><input type="checkbox" name="services" value="Audit & Assurance"><span>Audit & Assurance</span></label>
+                            <label class="custom-checkbox"><input type="checkbox" name="services" value="Direct Tax"><span>Direct Tax / Income Tax</span></label>
+                            <label class="custom-checkbox"><input type="checkbox" name="services" value="Indirect Tax"><span>Indirect Tax / GST</span></label>
+                            <label class="custom-checkbox"><input type="checkbox" name="services" value="Corporate Compliance"><span>ROC / Corporate Compliance</span></label>
+                            <label class="custom-checkbox"><input type="checkbox" name="services" value="Accounting"><span>Accounting & Bookkeeping</span></label>
+                            <label class="custom-checkbox"><input type="checkbox" name="services" value="Business Registration"><span>Business Registrations</span></label>
+                            <label class="custom-checkbox"><input type="checkbox" name="services" value="Financial Advisory"><span>Financial Advisory</span></label>
+                            <label class="custom-checkbox"><input type="checkbox" name="services" value="Project Financing"><span>Project Financing</span></label>
+                        </div>
+                        <span class="error-message checkbox-error"></span>
+                    </div>
+                    <div class="form-grid">
+                        <div class="input-group full-width">
+                            <label for="otherServices">Other Specialised Services</label>
+                            <input type="text" id="otherServices" name="otherServices" placeholder="e.g. RERA Compliance, Startup Advisory">
+                        </div>
+                        <div class="input-group">
+                            <label for="topServices">Top 3 Most Requested Services *</label>
+                            <input type="text" id="topServices" name="topServices" required placeholder="e.g. GST, ITR, Company Incorporation">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="profitableService">Most Profitable Service</label>
+                            <input type="text" id="profitableService" name="profitableService" placeholder="Which service brings highest revenue?">
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="highlightService">Which service do you want to highlight most on the homepage? *</label>
+                            <input type="text" id="highlightService" name="highlightService" required placeholder="e.g. Audit & Assurance">
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Branding -->
+                <div class="form-step" data-step="3">
+                    <h3>3. Branding & Firm Identity</h3>
+                    <div class="form-grid">
+                        <div class="input-group full-width">
+                            <label for="tagline">Firm Tagline / Slogan (Optional)</label>
+                            <input type="text" id="tagline" name="tagline" placeholder="e.g. Your Trusted Financial Partners">
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="aboutFirm">About Firm (Short summary) *</label>
+                            <textarea id="aboutFirm" name="aboutFirm" required placeholder="Tell us briefly about your firm's history and values..." rows="3"></textarea>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="experience">Total Years of Experience *</label>
+                            <input type="text" id="experience" name="experience" required placeholder="e.g. 15+ Years">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="industries">Key Industries Served</label>
+                            <input type="text" id="industries" name="industries" placeholder="e.g. Healthcare, IT, Real Estate">
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="teamMembers">Key Team Members (Names & Designations)</label>
+                            <textarea id="teamMembers" name="teamMembers" placeholder="e.g. Rahul Kumar (FCA), Amit Singh (ACA)" rows="2"></textarea>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="testimonials">Client Testimonials / Reviews (Paste here or provide a Google link)</label>
+                            <textarea id="testimonials" name="testimonials" placeholder="Paste 1-2 good reviews from clients..." rows="2"></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label for="logoLink">Logo Link (Drive/Dropbox)</label>
+                            <input type="url" id="logoLink" name="logoLink" placeholder="Provide link to your logo files">
+                        </div>
+                        <div class="input-group">
+                            <label for="photosLink">Office/Team Photos Link</label>
+                            <input type="url" id="photosLink" name="photosLink" placeholder="Provide link to high-res photos">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Strategy -->
+                <div class="form-step" data-step="4">
+                    <h3>4. Website Strategy</h3>
+                    <div class="form-grid">
+                        <div class="input-group full-width">
+                            <label for="targetClient">Who is your primary target client? *</label>
+                            <select id="targetClient" name="targetClient" required>
+                                <option value="" disabled selected>Select Target Client</option>
+                                <option value="Individuals & Salaried">Individuals & Salaried Professionals</option>
+                                <option value="Small Businesses & Startups">Small Businesses & Startups</option>
+                                <option value="Mid to Large Corporate">Mid to Large Corporate Companies</option>
+                                <option value="NRIs & Foreign Companies">NRIs & Foreign Companies</option>
+                                <option value="All of the above">All of the above</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group full-width">
+                            <label>Primary Goal of Website *</label>
+                            <div class="radio-grid">
+                                <label class="custom-radio"><input type="radio" name="goal" value="Lead Generation" required><span>Generate Leads/Enquiries</span></label>
+                                <label class="custom-radio"><input type="radio" name="goal" value="Brand Authority"><span>Build Trust & Brand Authority</span></label>
+                                <label class="custom-radio"><input type="radio" name="goal" value="Client Portal"><span>Informational / Client Portal</span></label>
+                            </div>
+                            <span class="error-message radio-error"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="primaryCTA">Primary Call-to-Action (CTA) *</label>
+                            <select id="primaryCTA" name="primaryCTA" required>
+                                <option value="" disabled selected>Select Primary CTA</option>
+                                <option value="Call Now">Call Now</option>
+                                <option value="WhatsApp Us">WhatsApp Us</option>
+                                <option value="Book Consultation">Book a Consultation Form</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="usp">Unique Selling Proposition (USP) *</label>
+                            <input type="text" id="usp" name="usp" required placeholder="Why should clients choose you?">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="competitors">List 1-2 Competitor Websites you like</label>
+                            <input type="text" id="competitors" name="competitors" placeholder="e.g. www.xyz.com">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Content -->
+                <div class="form-step" data-step="5">
+                    <h3>5. Content & Authority</h3>
+                    <div class="form-grid">
+                        <div class="input-group full-width">
+                            <label for="caseStudies">Notable Case Studies / Achievements</label>
+                            <textarea id="caseStudies" name="caseStudies" placeholder="Briefly mention any major cases or tax savings achieved..." rows="3"></textarea>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="certifications">Certifications / Empanelment</label>
+                            <textarea id="certifications" name="certifications" placeholder="e.g. Empanelled with CAG, RBI, etc." rows="2"></textarea>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="sampleWork">Sample Work Link (Optional)</label>
+                            <input type="url" id="sampleWork" name="sampleWork" placeholder="Link to any published articles, brochures, etc.">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6: Technical Details -->
+                <div class="form-step" data-step="6">
+                    <h3>6. Technical & Features</h3>
+                    <div class="form-grid">
+                        <div class="input-group full-width">
+                            <label>Do you already have a Domain Name? *</label>
+                            <div class="radio-grid">
+                                <label class="custom-radio"><input type="radio" name="hasDomain" value="Yes" required><span>Yes, I have one</span></label>
+                                <label class="custom-radio"><input type="radio" name="hasDomain" value="No"><span>No, I need one</span></label>
+                            </div>
+                            <span class="error-message radio-error"></span>
+                        </div>
+                        <div class="input-group full-width" id="domainInputGroup">
+                            <label for="domainName">Domain Name / Preferred Domain Name</label>
+                            <input type="text" id="domainName" name="domainName" placeholder="e.g. www.myfirm.com">
+                        </div>
+                        <div class="input-group">
+                            <label for="linkedin">LinkedIn Profile URL</label>
+                            <input type="url" id="linkedin" name="linkedin" placeholder="Firm or Partner's LinkedIn">
+                        </div>
+                        <div class="input-group">
+                            <label for="twitter">Twitter / X URL</label>
+                            <input type="url" id="twitter" name="twitter" placeholder="Optional">
+                        </div>
+                        <div class="input-group">
+                            <label for="targetCity">Target City for SEO *</label>
+                            <input type="text" id="targetCity" name="targetCity" required placeholder="e.g. Patna, Delhi">
+                            <span class="error-message"></span>
+                        </div>
+                        
+                        <div class="form-group full-width" style="margin-top: 16px;">
+                            <label>Required Pages (Select what you need)</label>
+                            <div class="checkbox-grid">
+                                <label class="custom-checkbox"><input type="checkbox" name="pages" value="Home" checked disabled><span>Home (Required)</span></label>
+                                <label class="custom-checkbox"><input type="checkbox" name="pages" value="About Us" checked disabled><span>About Us (Required)</span></label>
+                                <label class="custom-checkbox"><input type="checkbox" name="pages" value="Services" checked disabled><span>Services (Required)</span></label>
+                                <label class="custom-checkbox"><input type="checkbox" name="pages" value="Contact" checked disabled><span>Contact (Required)</span></label>
+                                <label class="custom-checkbox"><input type="checkbox" name="pages" value="Blog/Updates"><span>Blog / Updates</span></label>
+                                <label class="custom-checkbox"><input type="checkbox" name="pages" value="Careers"><span>Careers</span></label>
+                                <label class="custom-checkbox"><input type="checkbox" name="pages" value="Useful Links"><span>Useful Links/Tools</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7: Project Details -->
+                <div class="form-step" data-step="7">
+                    <h3>7. Project Details</h3>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="deadline">Expected Launch Date *</label>
+                            <input type="date" id="deadline" name="deadline" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group">
+                            <label for="priority">Project Priority *</label>
+                            <select id="priority" name="priority" required>
+                                <option value="" disabled selected>Select Priority</option>
+                                <option value="Urgent (1 week)">Urgent (1 week)</option>
+                                <option value="Normal (2-3 weeks)">Normal (2-3 weeks)</option>
+                                <option value="Relaxed (1 month+)">Relaxed (1 month+)</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="notes">Any additional notes or specific requirements?</label>
+                            <textarea id="notes" name="notes" placeholder="Tell me anything else I should know..." rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Navigation Buttons -->
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">Back</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn">Next Step <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></button>
+                    <button type="submit" class="btn btn-accent" id="submitBtn" style="display: none;">Submit Requirements</button>
+                </div>
+                <p id="formStatus" class="form-status-message" role="status" aria-live="polite" hidden></p>
+            </form>
+
+            <!-- Success Screen -->
+            <div id="successScreen" class="success-screen hidden">
+                <div class="success-icon"><i class="fa-solid fa-check-circle"></i></div>
+                <h3>Requirements Received!</h3>
+                <p>Thank you for submitting your details. I'll review this information and get back to you shortly to start building your premium CA website.</p>
+                <div class="hero-cta-group" style="justify-content: center; margin-top: 32px;">
+                    <a href="https://wa.me/916204081864" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> WhatsApp Me Now</a>
+                    <a href="index.html" class="btn btn-secondary">Return to Home</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/validation.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

@@ -61,7 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             
-            navLinks.classList.remove('active'); // Close mobile menu if open
+            if (navLinks) {
+                navLinks.classList.remove('active'); // Close mobile menu if open
+            }
             if(mobileMenuBtn) {
                 mobileMenuBtn.setAttribute('aria-expanded', 'false');
             }
@@ -101,12 +103,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
 
-    // Production: Track page visibility for analytics
-    document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-            console.log('Page hidden');
-        } else {
-            console.log('Page visible');
-        }
-    });
+    // Keep production console clean. Add analytics here when a provider is configured.
 });
